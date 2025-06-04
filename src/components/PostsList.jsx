@@ -1,14 +1,14 @@
-import axios from "axios";
-import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { usePosts } from "../contexts/PostsContext";
 export default function PostsList() {
-  const [postsList, setPostsList] = useState([]);
-  useEffect(() => {
-    axios.get("http://localhost:3000/posts").then((res) => {
-      const listPosts = res.data;
-      setPostsList(listPosts);
-    });
-  }, []);
+  const { postsList } = usePosts();
+  //   const [postsList, setPostsList] = useState([]);
+  //   useEffect(() => {
+  //     axios.get("http://localhost:3000/posts").then((res) => {
+  //       const listPosts = res.data;
+  //       setPostsList(listPosts);
+  //     });
+  //   }, []);
 
   return (
     <>
