@@ -3,7 +3,9 @@ import PostsList from "../../components/PostsList";
 export default function PostsPage() {
   return (
     <>
-      <h1>Pagina posts</h1>
+      <div className="container my-4">
+        <h1>Tutte le nostre ricette</h1>
+      </div>
       <PostsList />
     </>
   );
