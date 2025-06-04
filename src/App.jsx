@@ -2,6 +2,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import PostsPage from "./pages/posts/PostsPage";
 import DefaultLayout from "./pages/layouts/DefaultLayout";
 import HomePage from "./pages/HomePage";
+import DetailsPostPage from "./pages/posts/DetailsPostPage";
 import { PostsProvider } from "./contexts/PostsContext";
 
 export default function App() {
@@ -16,7 +17,7 @@ export default function App() {
               {/* ROTTE CON IN COMUNE IL PREFISSO  */}
               <Route path="/posts">
                 <Route path="" element={<PostsPage />}></Route>
-                {/* <Route path=":id" element={<DetailsPostPage />}></Route> */}
+                <Route path=":id" element={<DetailsPostPage />}></Route>
               </Route>
             </Route>
           </Routes>
